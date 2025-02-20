@@ -41,4 +41,7 @@ public class Restaurant {
 	@JoinColumn(name = "category_id")
 	private Category category;
 	
+	@OneToOne
+	private BusinessHours businessHours;
+	
 }
