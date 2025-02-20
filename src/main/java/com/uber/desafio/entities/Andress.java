@@ -4,9 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,28 +14,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Restaurant {
-	
+public class Andress {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String name;
+	private String street;
 	
-	@OneToOne
-	private Andress andress;
+	private String city;
 	
-	@OneToOne
-	private Coordinate coodinates;
+	private String state;
 	
-	private Double rating;
+	private String zipCode;
 	
-	private String phone;
-	
-	private String img; 
-	
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
-	
+	private String country;
 }
